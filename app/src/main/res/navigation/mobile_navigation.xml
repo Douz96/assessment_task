@@ -14,12 +14,40 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.mytask.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_profile"
         tools:layout="@layout/fragment_dashboard" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_notifications"-->
+<!--        android:name="com.example.mytask.ui.notifications.NotificationsFragment"-->
+<!--        android:label="@string/title_contact"-->
+<!--        tools:layout="@layout/fragment_notifications">-->
+<!--    <action-->
+<!--        android:id="@+id/action_fragmentNotification_to_userDetailsFragment"-->
+<!--        app:destination="@id/navigation_user_details" />-->
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_user_details"-->
+<!--        android:name="com.example.mytask.ui.user_details.UserDetailsFragment"-->
+<!--        android:label="@string/title_contact"-->
+<!--        tools:layout="@layout/fragment_user_details" />-->
+
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.mytask.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="Contact"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_fragmentNotification_to_userDetailsFragment"
+            app:destination="@id/navigation_user_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_details"
+        android:name="com.example.mytask.ui.user_details.UserDetailsFragment"
+        android:label="User Details"
+        tools:layout="@layout/fragment_user_details"
+        />
 </navigation>
